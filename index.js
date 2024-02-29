@@ -17,11 +17,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter Table of Contents.',
-        name: 'contents',
-    },
-    {
-        type: 'input',
         message: 'Enter Installation Information.',
         name: 'installation',
     },
@@ -31,8 +26,9 @@ const questions = [
         name: 'usage',
     },
     {
-        type: 'input',
-        message: 'Enter License Here.',
+        type: 'rawlist',
+        message: 'Please select a license for this project.',
+        choices: ['none', 'MIT', 'APACHE2.0', 'BOOST1.0', 'MPL2.0'],
         name: 'license',
     },
     {
@@ -53,7 +49,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter Your Github Username',
-        name: 'name',
+        name: 'github',
     },
     {
         type: 'input',
