@@ -3,7 +3,7 @@
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    const mlpURL = {
+    const badgeURL = {
         'MIT': 'MIT',
         'ISC': 'ISC',
         'MLP 2.0': 'MLP_2.0',
@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
     if (license === 'none') {
         return '';
     } else {
-        return `![Github license](https://img.shields.io/badge/License-${license}-lightblue.svg)`;
+        return `![Github license](https://img.shields.io/badge/License-${badgeURL[license]}-lightblue.svg)`;
     }
 }
 
@@ -59,11 +59,12 @@ ${data.description}
 * [Questions](#questions)
 
 ## Installation
-Visit the live URL here: (${data.installation})
+Visit the live URL here: [${data.installation}](${data.installation})
 
 ## Usage
 ${data.usage}
-![${alt-text}](${data.screenshot})
+
+[${data.screenshot}](${data.image})
 
 ## License
 ${renderLicenseLink(data.license)}
