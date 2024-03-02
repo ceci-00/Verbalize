@@ -17,7 +17,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter Installation Information.',
+        message: 'Enter Deployed App URL Here.',
         name: 'installation',
     },
     {
@@ -28,7 +28,7 @@ const questions = [
     {
         type: 'rawlist',
         message: 'Please select a license for this project.',
-        choices: ['none', 'MIT', 'APACHE2.0', 'BOOST1.0', 'MPL2.0'],
+        choices: ['none', 'MIT', 'ISC', 'MPL 2.0'],
         name: 'license',
     },
     {
@@ -72,25 +72,24 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile() {
     inquirer
-    .prompt(questions)
-        .then((data) => {
-        const markdown = generateMarkdown(data);
-        fs.writeFileSync(`README.md`, markdown);
-        console.log(`README.md file generated successfully!`);
-    })
-    .catch((err) => {
-        console.error(`Error generating README.md file`, err);
-    });
+        .prompt(questions)
+        .then((response) => {
+            const markdown = generateMarkdown(response)
+            fs.writeFileSync("README.md", markdown);
+            console.log(`README.md file generated successfully!`);
+        })
+        .catch((err) => {
+            console.error(`Error generating README.md file`, err);
+        })
 }
 
 // TODO: Create a function to initialize app
-// function init() {
-//     writeToFile()
+function init() {
+    writeToFile();
+}
 
-//     }
 
 // Function call to initialize app
-// init();
+init();
 
 module.exports = questions
-writeToFile()
