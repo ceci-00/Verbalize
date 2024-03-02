@@ -3,15 +3,22 @@
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+    console.log('License:', license);
     const badgeURL = {
+        'MIT': 'MIT-yellow.svg',
+        'ISC': 'ISC-blue.svg',
+        'MLP 2.0': 'MPL_2.0-brightgreen.svg',
+    };
+    const badgeName = {
         'MIT': 'MIT',
         'ISC': 'ISC',
-        'MLP 2.0': 'MLP_2.0',
+        'MLP 2.0': 'MLP-2.0',
     };
+    console.log('badge name', badgeName[license]);
     if (license === 'none') {
         return '';
     } else {
-        return `![Github license](https://img.shields.io/badge/License-${badgeURL[license]}-lightblue.svg)`;
+        return `[![License: ${license}](https://img.shields.io/badge/License-${badgeURL[license]})](https://opensource.org/licenses/${badgeName[license]})`;
     }
 }
 
