@@ -28,12 +28,12 @@ const questions = [
     {
         type: 'input',
         message: 'Enter URL or path to image you would like to include in your README',
-        name: 'screenshot',
+        name: 'image',
     },
     {
         type: 'input',
         message: 'Enter a short description of the image',
-        name: 'alt-text',
+        name: 'screenshot',
     },
     {
         type: 'rawlist',
