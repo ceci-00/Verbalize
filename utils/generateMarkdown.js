@@ -63,7 +63,7 @@ Visit the live URL here: (${data.installation})
 
 ## Usage
 ${data.usage}
-![alt-text](${data.screenshot})
+![${alt-text}](${data.screenshot})
 
 ## License
 ${renderLicenseLink(data.license)}
