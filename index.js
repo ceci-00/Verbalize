@@ -26,6 +26,16 @@ const questions = [
         name: 'usage',
     },
     {
+        type: 'input',
+        message: 'Enter URL or path to image you would like to include in your README',
+        name: 'screenshot',
+    },
+    {
+        type: 'input',
+        message: 'Enter a short description of the image',
+        name: 'alt-text',
+    },
+    {
         type: 'rawlist',
         message: 'Please select a license for this project.',
         choices: ['none', 'MIT', 'ISC', 'MPL 2.0'],
