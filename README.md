@@ -15,7 +15,7 @@ This app uses inquirer to prompt user with a series of questions in the command 
 Clone the Verbalize repo to local computer. Using your code editor of choice, create a package.json for the node.js package by running 'npm init -y' in the terminal. Install the inquirer package by entering 'npm i inquirer@8.2.4' in the terminal. To initialize the app, simply type 'node index.js' in the terminal and answer the series of questions in order to create your professional README.md file.
 
 ## Usage
-![The app prompts user with a series of questions. It inputs the data collected from those prompts into a string, then it creates a README.md file from the response.](./media/readme%20app.mp4)
+[Usage Demonstration](<./media/readme%20app.mp4>)
 
 ## License
 [License: MIT](https://opensource.org/licenses/MIT)
