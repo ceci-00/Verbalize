@@ -1,14 +1,13 @@
-
-// TODO: Create a function that returns a license badge based on which license is passed in
-
-// If there is no license, return an empty string
+// function returns license badge for selected license
 function renderLicenseBadge(license) {
     console.log('License:', license);
+    // map key and value based on license selected
     const badgeURL = {
         'MIT': 'MIT-yellow',
         'ISC': 'ISC-blue',
         'MPL 2.0': 'MPL_2.0-brightgreen',
     };
+    //no license, return empty string
     if (license === 'none') {
         return '';
     } else {
@@ -16,14 +15,15 @@ function renderLicenseBadge(license) {
     }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// returns link for selected license
 function renderLicenseLink(license) {
+    // map key and value for license selected
     const licenseURLs = {
         'MIT': 'MIT',
         'ISC': 'ISC',
         'MPL 2.0': 'MPL-2.0',
     };
+    // no license, return empty string
     if (license === 'none') {
         return '';
     } else {
@@ -31,9 +31,9 @@ function renderLicenseLink(license) {
     }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// returns the license section of README
 function renderLicenseSection(license) {
+    // no license, return empty string
     if (license === 'none') {
         return '';
     } else {
@@ -41,9 +41,9 @@ function renderLicenseSection(license) {
     }
 }
 
-// TODO: Create a function to generate markdown for README
+// generates markdown for README
 function generateMarkdown(data) {
-    console.log('data received for generatemd function', data);
+    // return template literal with data from input
     return `# ${data.title}
 ${renderLicenseBadge(data.license)}
 
@@ -78,7 +78,9 @@ ${data.tests}
 
 ## Questions
 ${data.questions}
+
 Github - [${data.github}](https://github.com/${data.github})
+
 For additional questions, you may contact me at ${data.email}.
 `;
 }
